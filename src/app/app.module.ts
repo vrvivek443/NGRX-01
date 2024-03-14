@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { Appstate } from './shared/Global/App.state';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { CounterComponent } from './component/counter/counter.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { blogReducer } from './shared/Blog/Blog.reducer';
 
 
 @NgModule({
@@ -38,7 +40,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({counter:counterReducer}),
+    StoreModule.forRoot(Appstate),
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,

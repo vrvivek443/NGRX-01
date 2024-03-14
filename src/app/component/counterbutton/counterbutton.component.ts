@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppstateModel } from 'src/app/shared/Global/Appstate.model';
 import { increment, decrement, reset, changechannelname } from 'src/app/shared/counter.action';
 
 @Component({
@@ -8,7 +9,7 @@ import { increment, decrement, reset, changechannelname } from 'src/app/shared/c
   styleUrls: ['./counterbutton.component.css']
 })
 export class CounterbuttonComponent {
-  constructor(private store:Store<{counter:{counter:number}}>)
+  constructor(private store:Store<AppstateModel>)
   {
 
   }
