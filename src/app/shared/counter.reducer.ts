@@ -7,7 +7,7 @@ const _counterReducer=createReducer(initialState,
         return{
             ...state,
             counter:state.counter + 1,
-            channelname:"Ice"
+            
 
         };
     }),
@@ -15,7 +15,7 @@ const _counterReducer=createReducer(initialState,
         return{
             ...state,
             counter:state.counter - 1,
-            channelname:"Fire"
+            
 
         }
     }),
@@ -23,22 +23,21 @@ const _counterReducer=createReducer(initialState,
         return{
             ...state,
             counter:0,
-            channelname:"Water"
-        }
+                    }
     
     }),
     on(customincrement, (state,action)=>{
         return{
             ...state,
             counter: state.counter + action.value,
-            channelname:"Mountain"
+            
         }
     }),
     on(customdecrement, (state,action)=>{
         return{
             ...state,
             counter: state.counter - action.value,
-            channelname:"Plateau"
+            
         }
     }),
     on(changechannelname, (state,action)=>{

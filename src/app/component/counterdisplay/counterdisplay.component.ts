@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { counterModel } from 'src/app/shared/counter.model';
 import { Subscription, Observable } from 'rxjs';
+import { getcounter } from 'src/app/shared/counter.selector';
 
 
 @Component({
@@ -19,19 +20,20 @@ export class CounterdisplayComponent {
 
   }
   ngOnDestroy(): void {
-    // if(this.counterSubscribe)
-    // {
-    //   this.counterSubscribe.unsubscribe()
-    // }
+    if(this.counterSubscribe)
+    {
+      this.counterSubscribe.unsubscribe()
+    }
   }
   ngOnInit()
   {
-    // debugger
-    // this.counterSubscribe=this.store.select('counter').subscribe(data=>{
-    //   this.counterdisplay=data.counter
-    //   this.channelname=data.channelname
-    // })
-    this.counter$=this.store.select('counter');
+    
+    this.counterSubscribe=this.store.select(getcounter).subscribe(data=>{
+      this.counterdisplay=data
+      console.log("Counter display")
+     
+    });
+    // this.counter$=this.store.select('counter');
   }
   
 

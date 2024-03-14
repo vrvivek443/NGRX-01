@@ -14,12 +14,12 @@ export class CounterbuttonComponent {
   }
   onIncrement()
   {
-    debugger
+    
     this.store.dispatch(increment())
   }
   onDecrement()
   {
-    debugger
+    
     this.store.dispatch(decrement())
   }
   reset()
