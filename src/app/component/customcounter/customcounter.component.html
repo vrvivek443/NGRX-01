@@ -2,7 +2,9 @@
     <mat-card-content>
       <mat-form-field>
         <label>Custom Input</label>
-        <input matInput [(ngModel)]="inputValue">
+        <input matInput type="number" [(ngModel)]="inputValue"> <br><br>
+        
+
       </mat-form-field><br>
       <button mat-raised-button color="primary" (click)="incrementCounter()">Increment</button>
       <button mat-raised-button color="warn" (click)="decrementCounter()">Decrement</button>
