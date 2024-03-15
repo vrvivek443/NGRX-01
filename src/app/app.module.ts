@@ -5,9 +5,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { Appstate } from './shared/Global/App.state';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { blogReducer } from './shared/Blog/Blog.reducer';
+import { AddblogComponent } from './addblog/addblog.component';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { blogReducer } from './shared/Blog/Blog.reducer';
     HomeComponent,
     CounterComponent,
     BlogComponent,
-    MenuheaderComponent
+    MenuheaderComponent,
+    AddblogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { blogReducer } from './shared/Blog/Blog.reducer';
     FormsModule,
     StoreDevtoolsModule.instrument({ maxAge: 0, logOnly: !isDevMode() }),
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

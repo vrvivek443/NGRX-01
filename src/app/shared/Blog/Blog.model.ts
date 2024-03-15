@@ -3,3 +3,6 @@ export interface Blogmodel{
     title:string,
     description:string
 }
+export interface Blogs{
+    bloglist:Blogmodel[]
+}

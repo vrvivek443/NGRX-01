@@ -1,8 +1,8 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { Blogmodel } from "./Blog.model";
+import { Blogmodel, Blogs } from "./Blog.model";
 
 
-const getBlogstate=createFeatureSelector<Blogmodel[]>('Blog');
+const getBlogstate=createFeatureSelector<Blogs>('Blog');
 export const getBlog=createSelector(getBlogstate, (state)=>{
-    return state
+    return state.bloglist
 })

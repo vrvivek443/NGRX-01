@@ -1,7 +1,7 @@
-import { Blogmodel } from "../Blog/Blog.model";
+import { Blogs } from "../Blog/Blog.model";
 import { counterModel } from "../counter.model";
 
 export interface AppstateModel{
     counter:counterModel,
-    Blog:Blogmodel[]
+    Blog:Blogs
 }
