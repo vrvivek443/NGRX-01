@@ -1,10 +1,15 @@
-<div style="text-align: center;">
-<h1>Technology Blogs</h1>
-<button mat-raised-button (click)="onAdd()">Add</button>
 
-<mat-card *ngFor="let item of bloglist">
+<div style="text-align: center; background-color: #220e24;">
+<h1 style="color: aliceblue;"><b>TECHNO BLOGS</b></h1>
+<button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+
+<mat-card *ngFor="let item of bloglist" class="field1">
     <mat-card-header>
         <h1>{{item.title}}</h1>
+        <div style="text-align: right; width: 100%">
+        <button mat-raised-button class="ubutton" (click)="onEdit(item.id)"><mat-icon fontIcon="edit"></mat-icon></button>
+        <button mat-raised-button class="ubutton" (click)="onDelete(item.id)"><mat-icon fontIcon="delete"></mat-icon></button>
+    </div>
     </mat-card-header>
     <mat-card-content>
         <p>{{item.description}}</p>
